@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_flask():
+def index():
     """Route of '/' """
     return 'Hello HBNB!'
 
