@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def index():
-    """Route of '/' """
+    """Returns Hello HBNB"""
     return 'Hello HBNB!'
 
 
@@ -15,6 +15,12 @@ def index():
 def hbnb():
     """Route of '/hbnb' """
     return 'HBNB'
+
+
+@app.route('/c/<text>', strict_slashes=False)
+def c_is_fun(text):
+    """display “C ” followed by the value of the text variable"""
+    return "C " + text.replace(' ', '_')
 
 
 if __name__ == "__main__":
